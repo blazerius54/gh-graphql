@@ -5,10 +5,6 @@ import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
 const styles = theme => ({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
   textField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
@@ -17,42 +13,36 @@ const styles = theme => ({
   dense: {
     marginTop: 19,
   },
-  menu: {
-    width: 200,
-  },
 });
 
-
 class FilterInput extends React.Component {
-  state = {
-    dense: '',
-  };
-
-  handleChange = name => event => {
-    this.setState({ [name]: event.target.value });
-  };
-
   render() {
-    const { classes } = this.props;
-    const { dense } = this.state;
-
+    const { classes, handleChange, serachInput, sendRepoRequest } = this.props;
     return (
-      <form className={classes.container} noValidate autoComplete="off">
+      <form
+        noValidate
+        autoComplete="off"
+        onSubmit={sendRepoRequest(serachInput)}
+      >
         <TextField
           id="standard-dense"
           label="Dense"
           className={classNames(classes.textField, classes.dense)}
           margin="dense"
-          value={dense}
-          onChange={this.handleChange('dense')}
+          value={serachInput}
+          onChange={handleChange('serachInput')}
         />
+        <button type="submit">click</button>
       </form>
     );
   }
 }
 
 FilterInput.propTypes = {
+  handleChange: PropTypes.func.isRequired,
+  sendRepoRequest: PropTypes.func.isRequired,
   classes: PropTypes.object.isRequired,
+  serachInput: PropTypes.string.isRequired,
 };
 
 export default withStyles(styles)(FilterInput);
