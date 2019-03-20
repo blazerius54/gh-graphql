@@ -3,7 +3,6 @@ export const getRepos = searchText =>
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-      Authorization: `Bearer feb53d8cd670a08fe0514f09da2b8b73a8cb0265`,
     },
     method: 'POST',
     body: JSON.stringify({
