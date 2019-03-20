@@ -22,7 +22,7 @@ export const getRepos = searchText =>
                       login
                       avatarUrl
                     }
-                    nameWithOwner
+                    name
                     createdAt
                   }
                 }

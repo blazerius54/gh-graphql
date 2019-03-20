@@ -17,20 +17,20 @@ const styles = theme => ({
 
 class FilterInput extends React.Component {
   render() {
-    const { classes, handleChange, serachInput, sendRepoRequest } = this.props;
+    const { classes, handleChange, searchText, sendRepoRequest } = this.props;
     return (
       <form
         noValidate
         autoComplete="off"
-        onSubmit={sendRepoRequest(serachInput)}
+        onSubmit={sendRepoRequest(searchText)}
       >
         <TextField
           id="standard-dense"
           label="Dense"
           className={classNames(classes.textField, classes.dense)}
           margin="dense"
-          value={serachInput}
-          onChange={handleChange('serachInput')}
+          value={searchText}
+          onChange={handleChange('searchText')}
         />
         <button type="submit">click</button>
       </form>
@@ -42,7 +42,7 @@ FilterInput.propTypes = {
   handleChange: PropTypes.func.isRequired,
   sendRepoRequest: PropTypes.func.isRequired,
   classes: PropTypes.object.isRequired,
-  serachInput: PropTypes.string.isRequired,
+  searchText: PropTypes.string.isRequired,
 };
 
 export default withStyles(styles)(FilterInput);

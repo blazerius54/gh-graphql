@@ -20,54 +20,40 @@ const styles = theme => ({
 });
 
 let id = 0;
-function createData(name, calories, fat, carbs, protein) {
+function createData(name) {
   id += 1;
-  return { id, name, calories, fat, carbs, protein };
+  return { id, name};
 }
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+  createData('Frozen yoghurt', 159),
 ];
 
-function ReposTable(props) {
-  const { classes } = props;
-
-  return (
-    <Paper className={classes.root}>
-      <Table className={classes.table}>
-        <TableHead>
+const ReposTable = ({ classes, reposList }) => (
+  <Paper className={classes.root}>
+    <Table className={classes.table}>
+      <TableHead>
+        <TableRow>
+          <TableCell>Username</TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {reposList.map(repo => (
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat (g)</TableCell>
-            <TableCell align="right">Carbs (g)</TableCell>
-            <TableCell align="right">Protein (g)</TableCell>
+            <TableCell component="th" scope="row">
+              {repo.node.owner.login}
+            </TableCell>
+            <TableCell align="right">{repo.node.name}</TableCell>
           </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map(row => (
-            <TableRow key={row.id}>
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </Paper>
-  );
-}
+        ))}
+      </TableBody>
+    </Table>
+  </Paper>
+);
 
 ReposTable.propTypes = {
   classes: PropTypes.object.isRequired,
+  reposList: PropTypes.array.isRequired,
 };
 
 export default withStyles(styles)(ReposTable);
