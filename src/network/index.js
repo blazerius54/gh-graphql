@@ -1,33 +1,24 @@
-export const getRepos = searchText =>
-  fetch(`https://api.github.com/graphql`, {
+import { DIRECTION_FORWARD, DIRECTION_BACKWARD } from '../utils/consts';
+import { setBodyQuery } from './query';
+
+export const getRepos = (searchText, cursor, direction) => {
+  let queryArgs = 'first: 10';
+
+  if (cursor && direction) {
+    if (direction === DIRECTION_BACKWARD) {
+      queryArgs = `last: 10, before: "${cursor}"`;
+    }
+    if (direction === DIRECTION_FORWARD) {
+      queryArgs = `first: 10, after: "${cursor}"`;
+    }
+  }
+
+  return fetch(`https://api.github.com/graphql`, {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
     method: 'POST',
-    body: JSON.stringify({
-      query: `query {
-            search(query: "${searchText}", type: REPOSITORY, first: 5, ) {
-              repositoryCount
-              pageInfo {
-                hasPreviousPage
-                startCursor
-                endCursor
-                hasNextPage
-              }
-              edges {
-                node {
-                  ... on Repository {
-                    owner {
-                      login
-                      avatarUrl
-                    }
-                    name
-                    createdAt
-                  }
-                }
-              }
-            }
-          }`,
-    }),
+    body: setBodyQuery(searchText, queryArgs),
   });
+};

@@ -23,12 +23,11 @@ export const reposListError = error => ({
 
 // Async actions
 
-export function sendCardRequest(searchText) {
-  console.log(searchText)
+export function sendCardRequest(searchText, cursor, direction) {
   return dispatch => {
     dispatch(reposListRequest());
 
-    getRepos(searchText)
+    getRepos(searchText, cursor, direction)
       .then(response => response.json())
       .then(response => {
         dispatch(reposListSuccess(response));

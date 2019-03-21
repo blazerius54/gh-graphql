@@ -22,6 +22,7 @@ function mainPageReducer(state = initialState, action) {
         ...state,
         loading: false,
         reposList: action.payload.data.search.edges,
+        pageInfo: action.payload.data.search.pageInfo,
       };
     case REPOS_LIST_ERROR:
       return {
