@@ -6,12 +6,12 @@ import AppHeader from '../../components/AppHeader/index';
 import ReposTable from '../../components/ReposTable/index';
 import FilterInput from '../../components/FilterInput/index';
 import { sendCardRequest } from './actions';
-import { DIRECTION_FORWARD, DIRECTION_BACKWARD } from '../../utils/consts';
+import { DIRECTION_BACKWARD } from '../../utils/consts';
 import PaginationBtns from '../../components/PaginationBtns';
 
 class MainPage extends Component {
   state = {
-    searchText: 'book-zzz',
+    searchText: 'book-tabs',
   };
 
   handleChange = name => event => {
@@ -19,26 +19,22 @@ class MainPage extends Component {
   };
 
   sendRepoRequest = () => e => {
+    const { sendCardRequest } = this.props;
+    const { searchText } = this.state;
+
     e.preventDefault();
-    this.props.sendCardRequest(this.state.searchText);
+    sendCardRequest(searchText);
   };
 
   paginationRequest = direction => () => {
-    if (direction === DIRECTION_BACKWARD) {
-      this.props.sendCardRequest(
-        this.state.searchText,
-        this.props.pageInfo.startCursor,
-        direction,
-      );
-    }
+    const { pageInfo, sendCardRequest } = this.props;
+    const { searchText } = this.state;
+    const cursor =
+      direction === DIRECTION_BACKWARD
+        ? pageInfo.startCursor
+        : pageInfo.endCursor;
 
-    if (direction === DIRECTION_FORWARD) {
-      this.props.sendCardRequest(
-        this.state.searchText,
-        this.props.pageInfo.endCursor,
-        direction,
-      );
-    }
+    sendCardRequest(searchText, cursor, direction);
   };
 
   render() {

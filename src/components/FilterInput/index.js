@@ -18,16 +18,18 @@ class FilterInput extends React.Component {
       >
         <TextField
           id="standard-dense"
-          label="Search"
-          className={classNames(classes.textField, classes.dense)}
+          label="Search repositories"
+          className={classNames(classes.textField)}
           margin="dense"
           value={searchText}
           onChange={handleChange('searchText')}
         />
-        <Button variant="contained" type="submit"
-                className={classNames(classes.button)}
+        <Button
+          variant="contained"
+          type="submit"
+          className={classNames(classes.button)}
         >
-          Search
+          Ok
         </Button>
       </form>
     );

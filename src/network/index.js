@@ -1,4 +1,5 @@
 import { DIRECTION_FORWARD, DIRECTION_BACKWARD } from '../utils/consts';
+import { API_BASE_URL } from '../utils/config';
 import { setBodyQuery } from './query';
 
 export const getRepos = (searchText, cursor, direction) => {
@@ -13,7 +14,7 @@ export const getRepos = (searchText, cursor, direction) => {
     }
   }
 
-  return fetch(`https://api.github.com/graphql`, {
+  return fetch(API_BASE_URL, {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',

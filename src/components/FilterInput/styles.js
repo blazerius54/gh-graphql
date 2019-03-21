@@ -5,10 +5,6 @@ export const styles = theme => ({
     width: 200,
   },
 
-  dense: {
-    marginTop: 19,
-  },
-
   form: {
     display: 'flex',
   },
