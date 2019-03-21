@@ -8,6 +8,7 @@ import ReposTable from '../../components/ReposTable/index';
 import FilterInput from '../../components/FilterInput/index';
 import { sendCardRequest } from './actions';
 import { DIRECTION_FORWARD, DIRECTION_BACKWARD } from '../../utils/consts';
+import PaginationBtns from '../../components/PaginationBtns';
 
 class MainPage extends Component {
   state = {
@@ -23,7 +24,8 @@ class MainPage extends Component {
     this.props.sendCardRequest(this.state.searchText);
   };
 
-  paginationRequest(direction) {
+  paginationRequest = direction => {
+    console.log(direction)
     if (direction === DIRECTION_BACKWARD) {
       this.props.sendCardRequest(
         this.state.searchText,
@@ -39,7 +41,7 @@ class MainPage extends Component {
         direction,
       );
     }
-  }
+  };
 
   render() {
     const { searchText } = this.state;
@@ -54,22 +56,26 @@ class MainPage extends Component {
           searchText={searchText}
         />
         <ReposTable reposList={reposList} loading={loading} />
-        <div>
-          <Button
-            variant="contained"
-            disabled={!pageInfo.hasPreviousPage}
-            onClick={() => this.paginationRequest(DIRECTION_BACKWARD)}
-          >
-            Prev
-          </Button>
-          <Button
-            variant="contained"
-            disabled={!pageInfo.hasNextPage}
-            onClick={() => this.paginationRequest(DIRECTION_FORWARD)}
-          >
-            Next
-          </Button>
-        </div>
+        {/*<PaginationBtns*/}
+          {/*paginationRequest={this.paginationRequest}*/}
+          {/*pageInfo={pageInfo}*/}
+        {/*/>*/}
+         <div>
+         <Button
+         variant="contained"
+         disabled={!pageInfo.hasPreviousPage}
+         onClick={() => this.paginationRequest(DIRECTION_BACKWARD)}
+         >
+         Prev
+         </Button>
+         <Button
+         variant="contained"
+         disabled={!pageInfo.hasNextPage}
+         onClick={() => this.paginationRequest(DIRECTION_FORWARD)}
+         >
+         Next
+         </Button>
+         </div>
       </React.Fragment>
     );
   }

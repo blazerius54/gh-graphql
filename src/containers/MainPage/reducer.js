@@ -16,6 +16,7 @@ function mainPageReducer(state = initialState, action) {
       return {
         ...state,
         loading: true,
+        // reposList: [],
       };
     case REPOS_LIST_SUCCESS:
       return {
