@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import { DIRECTION_BACKWARD, DIRECTION_FORWARD } from '../../utils/consts';
+import './styles.css';
 
 const PaginationBtns = ({ pageInfo, paginationRequest }) => (
-  <div>
+  <div className="pagination-wrapper">
     <Button
       variant="contained"
       disabled={!pageInfo.hasPreviousPage}

@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef27a940-2365-4bfe-afea-232c004fb8a2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/PaginationBtns/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PaginationBtns/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FilterInput/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilterInput/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FilterInput/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FilterInput/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PaginationBtns/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PaginationBtns/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ReposTable/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ReposTable/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/MainPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MainPage/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/MainPage/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MainPage/reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/network/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/network/index.js" afterDir="false" />
@@ -20,8 +24,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/MainPage/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="43" column="4" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+            <state relative-caret-position="646">
+              <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -29,29 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reducer.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/containers/MainPage/reducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="query.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/network/query.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/FilterInput/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -59,14 +45,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/PaginationBtns/index.js">
+      <file leaf-file-name="styles.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/FilterInput/styles.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="289">
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/PaginationBtns/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -109,7 +101,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="task-05/pagination_btns" />
       </map>
     </option>
   </component>
@@ -127,18 +119,20 @@
         <option value="$PROJECT_DIR$/src/utils/configureStore.js" />
         <option value="$PROJECT_DIR$/src/containers/MainPage/consts.js" />
         <option value="$PROJECT_DIR$/src/components/ReposTable/style.js" />
-        <option value="$PROJECT_DIR$/src/components/FilterInput/styles.js" />
-        <option value="$PROJECT_DIR$/src/components/FilterInput/index.js" />
         <option value="$PROJECT_DIR$/src/utils/consts.js" />
         <option value="$PROJECT_DIR$/src/containers/MainPage/actions.js" />
         <option value="$PROJECT_DIR$/src/network/query.js" />
-        <option value="$PROJECT_DIR$/src/components/ReposTable/index.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/ReposTable/styles.js" />
+        <option value="$PROJECT_DIR$/src/components/ReposTable/index.js" />
         <option value="$PROJECT_DIR$/src/network/index.js" />
-        <option value="$PROJECT_DIR$/src/components/PaginationBtns/index.js" />
-        <option value="$PROJECT_DIR$/src/containers/MainPage/index.js" />
         <option value="$PROJECT_DIR$/src/containers/MainPage/reducer.js" />
+        <option value="$PROJECT_DIR$/src/containers/MainPage/index.js" />
+        <option value="$PROJECT_DIR$/src/components/PaginationBtns/styles.js" />
+        <option value="$PROJECT_DIR$/src/components/PaginationBtns/index.js" />
+        <option value="$PROJECT_DIR$/src/components/PaginationBtns/styles.css" />
+        <option value="$PROJECT_DIR$/src/components/FilterInput/index.js" />
+        <option value="$PROJECT_DIR$/src/components/FilterInput/styles.js" />
       </list>
     </option>
   </component>
@@ -201,6 +195,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="PaginationBtns" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gh-graphql" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gh-graphql" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="ReposTable" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gh-graphql" type="b2602c69:ProjectViewProjectNode" />
@@ -288,7 +289,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31579000" />
+    <option name="totallyTimeSpent" value="32000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -339,13 +340,6 @@
     <option name="RELOAD_CONTEXT" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -579,13 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/FilterInput/styles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/consts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -627,10 +614,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ReposTable/index.js">
+    <entry file="file://$PROJECT_DIR$/src/network/query.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        <state relative-caret-position="391">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -641,10 +628,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ReposTable/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/MainPage/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/network/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PaginationBtns/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/MainPage/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/PaginationBtns/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -653,45 +684,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/FilterInput/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/network/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/FilterInput/styles.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/network/query.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/MainPage/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="43" column="4" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/MainPage/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state relative-caret-position="289">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
         </state>
       </provider>
     </entry>

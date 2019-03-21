@@ -1,0 +1,9 @@
+.pagination-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination-wrapper button {
+  margin-left: 10px;
+}

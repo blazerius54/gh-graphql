@@ -4,7 +4,17 @@ export const styles = theme => ({
     marginRight: theme.spacing.unit,
     width: 200,
   },
+
   dense: {
     marginTop: 19,
+  },
+
+  form: {
+    display: 'flex',
+  },
+
+  button: {
+    alignSelf: 'flex-end',
+    marginBottom: '5px',
   },
 });

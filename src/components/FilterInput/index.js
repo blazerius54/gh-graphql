@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 import { styles } from './styles';
 
 class FilterInput extends React.Component {
@@ -10,6 +11,7 @@ class FilterInput extends React.Component {
     const { classes, handleChange, searchText, sendRepoRequest } = this.props;
     return (
       <form
+        className={classNames(classes.form)}
         noValidate
         autoComplete="off"
         onSubmit={sendRepoRequest(searchText)}
@@ -22,7 +24,11 @@ class FilterInput extends React.Component {
           value={searchText}
           onChange={handleChange('searchText')}
         />
-        <button type="submit">click</button>
+        <Button variant="contained" type="submit"
+                className={classNames(classes.button)}
+        >
+          Search
+        </Button>
       </form>
     );
   }

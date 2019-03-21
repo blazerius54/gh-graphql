@@ -26,21 +26,22 @@ const ReposTable = ({ classes, reposList, loading }) => (
         </TableRow>
       </TableHead>
       <TableBody>
-        {reposList.map(repo => (
-          <TableRow
-            className={(classes.centerText, classes.row)}
-            key={repo.node.name}
-            onClick={() => window.open(repo.node.url, '_blank')}
-          >
-            <TableCell align="center" component="th" scope="row">
-              {repo.node.owner.login}
-            </TableCell>
-            <TableCell align="center">{repo.node.name}</TableCell>
-            <TableCell align="center">
-              {formatDate(repo.node.createdAt)}
-            </TableCell>
-          </TableRow>
-        ))}
+        {reposList.map(repo => {
+          const { name, createdAt, url, owner } = repo.node;
+          return (
+            <TableRow
+              className={(classes.centerText, classes.row)}
+              key={`${name}${createdAt}`}
+              onClick={() => window.open(url, '_blank')}
+            >
+              <TableCell align="center" component="th" scope="row">
+                {owner.login}
+              </TableCell>
+              <TableCell align="center">{name}</TableCell>
+              <TableCell align="center">{formatDate(createdAt)}</TableCell>
+            </TableRow>
+          );
+        })}
       </TableBody>
     </Table>
   </Paper>
