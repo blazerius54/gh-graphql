@@ -18,6 +18,9 @@ export const getRepos = (searchText, cursor, direction) => {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
+      // В заголовке добавьте ваш токен
+      // https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line
+      // Authorization: `Bearer {token}`,
     },
     method: 'POST',
     body: setBodyQuery(searchText, queryArgs),
